@@ -1,44 +1,13 @@
 var map;
 
 $(document).ready(function () {
-    // Inittialize controls
-    $('body').bind('keypress', function (e) {
-        if (e.target.id === "name") return;
-        if (e.which == 32) {
-            toggleMenu();
-        }
-        else if (e.key == "h") {
-            visible = !visible;
-            if (visible) render();
-            else changeVisibility();
-        } else if (e.key == "l") {
-            toggleLegend();
-        }
-
-    })
     run();
 });
 
-function initTerrs() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            territories = JSON.parse(this.responseText);
-            for (let i in territories) {
-                Territories[territories[i].name] = null;
-            }
-        }
-    };
-    // xhttp.open("GET", "https://raw.githubusercontent.com/DevScyu/Wynn/master/territories.json", true);
-    // xhttp.send();
-}
 
 let data;
 
 async function run() {
-    //initTerrs();
-    // Initializing events
-    // initializing map
     let bounds = [];
     let images = [];
 
@@ -74,19 +43,12 @@ async function run() {
         image.addTo(map);
     }
 
-    //initializing variables
     let prevZoom = 7;
 
 
-    //on zoom end, update map based on zoom
     map.on('zoomend', () => {
         prevZoom = map.getZoom();
     });
-
-    //setInterval(render, 2000)
-    //var marker = L.marker([51.5, -0.09]).addTo(mymap);
-
-    //data = await axios.get('/api');
     data = await axios.get('https://cors-anywhere.herokuapp.com/https://wynnpendium.ehtycscythe.com/api/node_list.php?prof=all');
     data = data.data;
     console.log(data);
