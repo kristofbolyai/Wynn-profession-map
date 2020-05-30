@@ -87,7 +87,7 @@ async function run() {
     //var marker = L.marker([51.5, -0.09]).addTo(mymap);
 
     //data = await axios.get('/api');
-    data = await axios.get('https://wynnpendium.ehtycscythe.com/api/node_list.php?prof=all');
+    data = await axios.get('https://cors-anywhere.herokuapp.com/https://wynnpendium.ehtycscythe.com/api/node_list.php?prof=all');
     data = data.data;
     console.log(data);
 
