@@ -257,9 +257,11 @@ p a {
 }
 
 .menu-section {
-  margin-left: 5%;
-   margin-top: 5%;
+  margin-left: 1%;
+   margin-top: 1%;
+   color: white;
 }
+
 
 .guild-color {
   display: inline-block;

@@ -38,14 +38,41 @@
 		<div class="row">
 			<div style="overflow: scroll;" id="menu">
 				<div class="menu-section">
-					<label for="Farming">Farming</label>
+					<p style="color: white">Farming</p>
+					<label for="Farming">Toggle: </label>
 					<input onchange="reload(0)" type="checkbox" name="cm" id="Farming"><br>
-					<label for="Mining">Mining</label>
+					<label for="Farming">Type: </label>
+					<select id="Farming" onchange="reload(0)" name="ts"></select><br>
+					<p id="Farming" name="pc">Count: -</p>
+					<hr style="width: 100%; color: black; height: 1px; background-color:white;">
+
+					<p style="color: white">Mining</p>
+					<label for="Mining">Toggle: </label>
 					<input onchange="reload(1)" type="checkbox" name="cm" id="Mining"><br>
-					<label for="Woodcutting">Woodcutting</label>
+					<label for="Mining">Type: </label>
+					<select id="Mining" onchange="reload(1)" name="ts"></select><br>
+					<p id="Mining" name="pc">Count: -</p>
+					<hr style="width: 100%; color: black; height: 1px; background-color:white;">
+
+					<p style="color: white">Woodcutting</p>
+					<label for="Woodcutting">Toggle: </label>
 					<input onchange="reload(2)" type="checkbox" name="cm" id="Woodcutting"><br>
-					<label for="Fishing">Fishing</label>
+					<label for="Woodcutting">Type: </label>
+					<select id="Woodcutting" onchange="reload(2)" name="ts"></select><br>
+					<p id="Woodcutting" name="pc">Count: -</p>
+					<hr style="width: 100%; color: black; height: 1px; background-color:white;">
+
+					<p style="color: white">Fishing</p>
+					<label for="Fishing">Toggle: </label>
 					<input onchange="reload(3)" type="checkbox" name="cm" id="Fishing"><br>
+					<label for="Fishing">Type: </label>
+					<select id="Fishing" onchange="reload(3)" name="ts"></select><br>
+					<p id="Fishing" name="pc">Count: -</p>
+					<br>
+					<br>
+					<br>
+					<br>
+					<p style="color: white">Click on a marker to get the coordinates and additional data.</p>
 				</div>
 			</div>
 		</div>
